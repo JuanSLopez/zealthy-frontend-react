@@ -8,7 +8,7 @@ function TextInputForm() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-
+    
     // Handle form submission here
     const postData = {
       name: name,
@@ -53,6 +53,7 @@ function TextInputForm() {
               Name:
             </label>
             <input
+              placeholder="John Smith"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -64,6 +65,7 @@ function TextInputForm() {
               Email:
             </label>
             <input
+              placeholder="example@example.com"
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -75,6 +77,7 @@ function TextInputForm() {
               Description:
             </label>
             <textarea
+            placeholder="Description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               className="border rounded-lg py-2 px-3 w-full min-h-40 focus:outline-none focus:ring focus:border-blue-300"
